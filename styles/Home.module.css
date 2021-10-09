@@ -69,6 +69,16 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.backendtxt {
+  background: #0070f3;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
 .grid {
   display: flex;
   align-items: center;

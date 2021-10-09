@@ -2,8 +2,12 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import useSWR from 'swr'
+import fetch from '../libs/fetch'
 
-const Home: NextPage = () => {
+function Home() {
+  const { data } = useSWR('/api/hello', fetch)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -20,6 +24,12 @@ const Home: NextPage = () => {
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
+        </p>
+
+        <img id="logo" src="utdlogo.JPG" />
+        <p className={styles.description}>
+          Backend say {'  '}
+          <code className={styles.backendtxt}>{ JSON.stringify(data) }</code>
         </p>
 
         <div className={styles.grid}>
